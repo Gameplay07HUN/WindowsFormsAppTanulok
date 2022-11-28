@@ -90,5 +90,17 @@ namespace WindowsFormsAppTanulók
             }
         }
 
+        private void listBoxGyumolcsok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxGyumolcsok.SelectedIndex < 0)
+            {
+                return;
+            }
+            Gyumolcs kivalaszott_gumolcs = (Gyumolcs)listBoxGyumolcsok.SelectedItem;
+            textBoxAzonosito.Text = kivalaszott_gumolcs.Id.ToString();
+            textBoxGyumolcsnev.Text = kivalaszott_gumolcs.Nev;
+            numericUpDownEgysegar.Value = (decimal)kivalaszott_gumolcs.Egysegar;
+            numericUpDownMennyiseg.Value = (decimal)kivalaszott_gumolcs.Mennyiseg;
+        }
     }
 }

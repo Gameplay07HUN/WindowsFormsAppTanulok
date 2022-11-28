@@ -118,6 +118,7 @@
             this.textBoxGyumolcsnev.Name = "textBoxGyumolcsnev";
             this.textBoxGyumolcsnev.Size = new System.Drawing.Size(120, 26);
             this.textBoxGyumolcsnev.TabIndex = 5;
+            this.textBoxGyumolcsnev.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxAzonosito
             // 
@@ -126,6 +127,7 @@
             this.textBoxAzonosito.ReadOnly = true;
             this.textBoxAzonosito.Size = new System.Drawing.Size(120, 26);
             this.textBoxAzonosito.TabIndex = 4;
+            this.textBoxAzonosito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // labelEgysegar
             // 

@@ -45,11 +45,6 @@ namespace WindowsFormsAppTanulók
             }
         }
 
-        private void FormTanuloInsert_Load(object sender, EventArgs e)
-        {
-           Adatbetölt();
-           gyumolcs_lista_update();
-        }
         private void gyumolcs_lista_update()
         {
             listBoxGyumolcsok.Items.Clear();
@@ -65,9 +60,32 @@ namespace WindowsFormsAppTanulók
             }
             conn.Close();
         }
+        private void FormTanuloInsert_Load(object sender, EventArgs e)
+        {
+            Adatbetölt();
+            gyumolcs_lista_update();
+        }
 
         private void buttonUjGyumolcs_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxGyumolcsnev.Text))
+            {
+                MessageBox.Show("Adja meg a nevet!");
+                textBoxGyumolcsnev.Focus();
+                return;
+            }
+            if (numericUpDownEgysegar.Value == 0)
+            {
+                MessageBox.Show("Adja meg az egységárat!");
+                numericUpDownEgysegar.Focus();
+                return;
+            }
+            if (numericUpDownMennyiseg.Value == 0)
+            {
+                MessageBox.Show("Adja meg a mennyiséget!");
+                numericUpDownMennyiseg.Focus();
+                return;
+            }
             cmd.CommandText = "INSERT INTO `gyumolcsok` (`id`, `nev`, `egysegar`, `mennyiseg`) VALUES (NULL, @nev, @egysegar, @mennyiseg);";
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@nev", textBoxGyumolcsnev.Text);
@@ -94,6 +112,7 @@ namespace WindowsFormsAppTanulók
                 MessageBox.Show(ex.Message);
             }
             conn.Close();
+            gyumolcs_lista_update();
         }
         private void listBoxGyumolcsok_SelectedIndexChanged(object sender, EventArgs e)
         {

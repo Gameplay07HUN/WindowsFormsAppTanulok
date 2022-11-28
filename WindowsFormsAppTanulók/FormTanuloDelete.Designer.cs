@@ -30,6 +30,7 @@
         {
             this.labelTanuloDelete = new System.Windows.Forms.Label();
             this.groupBoxKivalasztottGyumolcs = new System.Windows.Forms.GroupBox();
+            this.buttonTorles = new System.Windows.Forms.Button();
             this.numericUpDownEgysegar = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownMennyiseg = new System.Windows.Forms.NumericUpDown();
             this.textBoxGyumolcsnev = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.labelGyumolcsnev = new System.Windows.Forms.Label();
             this.labelAzonosito = new System.Windows.Forms.Label();
             this.listBoxGyumolcsok = new System.Windows.Forms.ListBox();
-            this.buttonTorles = new System.Windows.Forms.Button();
             this.groupBoxKivalasztottGyumolcs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEgysegar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMennyiseg)).BeginInit();
@@ -73,6 +73,16 @@
             this.groupBoxKivalasztottGyumolcs.TabIndex = 4;
             this.groupBoxKivalasztottGyumolcs.TabStop = false;
             this.groupBoxKivalasztottGyumolcs.Text = "Kiválasztott gyümölcs";
+            // 
+            // buttonTorles
+            // 
+            this.buttonTorles.Location = new System.Drawing.Point(34, 225);
+            this.buttonTorles.Name = "buttonTorles";
+            this.buttonTorles.Size = new System.Drawing.Size(181, 35);
+            this.buttonTorles.TabIndex = 12;
+            this.buttonTorles.Text = "Törlés";
+            this.buttonTorles.UseVisualStyleBackColor = true;
+            this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
             // 
             // numericUpDownEgysegar
             // 
@@ -108,6 +118,7 @@
             this.textBoxGyumolcsnev.Name = "textBoxGyumolcsnev";
             this.textBoxGyumolcsnev.Size = new System.Drawing.Size(120, 26);
             this.textBoxGyumolcsnev.TabIndex = 5;
+            this.textBoxGyumolcsnev.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxAzonosito
             // 
@@ -116,6 +127,7 @@
             this.textBoxAzonosito.ReadOnly = true;
             this.textBoxAzonosito.Size = new System.Drawing.Size(120, 26);
             this.textBoxAzonosito.TabIndex = 4;
+            this.textBoxAzonosito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // labelEgysegar
             // 
@@ -161,16 +173,7 @@
             this.listBoxGyumolcsok.Name = "listBoxGyumolcsok";
             this.listBoxGyumolcsok.Size = new System.Drawing.Size(215, 450);
             this.listBoxGyumolcsok.TabIndex = 3;
-            // 
-            // buttonTorles
-            // 
-            this.buttonTorles.Location = new System.Drawing.Point(34, 225);
-            this.buttonTorles.Name = "buttonTorles";
-            this.buttonTorles.Size = new System.Drawing.Size(181, 35);
-            this.buttonTorles.TabIndex = 12;
-            this.buttonTorles.Text = "Törlés";
-            this.buttonTorles.UseVisualStyleBackColor = true;
-            this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
+            this.listBoxGyumolcsok.SelectedIndexChanged += new System.EventHandler(this.listBoxGyumolcsok_SelectedIndexChanged);
             // 
             // FormTanuloDelete
             // 
