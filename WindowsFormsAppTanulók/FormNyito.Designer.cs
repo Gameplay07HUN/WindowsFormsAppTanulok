@@ -95,6 +95,7 @@
             this.törlésToolStripMenuItem.Name = "törlésToolStripMenuItem";
             this.törlésToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.törlésToolStripMenuItem.Text = "Törlés";
+            this.törlésToolStripMenuItem.Click += new System.EventHandler(this.törlésToolStripMenuItem_Click);
             // 
             // tantárgyakToolStripMenuItem
             // 
@@ -138,7 +139,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormNyito";
             this.Text = "Nyitó Form";
-            this.Load += new System.EventHandler(this.FormNyito_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -22,14 +22,15 @@ namespace WindowsFormsAppTanulók
             Program.formTanuloInsert.ShowDialog();
         }
 
-        private void FormNyito_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.formTanuloUpdate.ShowDialog();
         }
+
+        private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.formTanuloDelete.ShowDialog();
+        }
+
     }
 }

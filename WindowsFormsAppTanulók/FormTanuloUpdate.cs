@@ -15,14 +15,14 @@ namespace WindowsFormsAppTanulók
 {
     public partial class FormTanuloUpdate : Form
     {
-        MySqlConnection conn;
-        MySqlCommand cmd;
+        MySqlConnection conn=null;
+        MySqlCommand cmd = null;
             public FormTanuloUpdate()
             {
                 InitializeComponent();
             }
 
-            private void Form1_Load(object sender, EventArgs e)
+            private void Adatbetölt()
             {
                 MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
                 builder.Server = "localhost";
@@ -48,6 +48,7 @@ namespace WindowsFormsAppTanulók
 
         private void FormTanuloUpdate_Load(object sender, EventArgs e)
         {
+            Adatbetölt();
             //MessageBox.Show(Program.formNyito.textBoxNev.Text + " adatainak módosítása");
             gyumolcs_lista_update();
         }
