@@ -31,6 +31,7 @@
             this.labelTanuloUpdate = new System.Windows.Forms.Label();
             this.listBoxGyumolcsok = new System.Windows.Forms.ListBox();
             this.groupBoxKivalasztottGyumolcs = new System.Windows.Forms.GroupBox();
+            this.buttonModosítas = new System.Windows.Forms.Button();
             this.numericUpDownEgysegar = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownMennyiseg = new System.Windows.Forms.NumericUpDown();
             this.textBoxGyumolcsnev = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.labelMennyiseg = new System.Windows.Forms.Label();
             this.labelGyumolcsnev = new System.Windows.Forms.Label();
             this.labelAzonosito = new System.Windows.Forms.Label();
-            this.buttonModosítas = new System.Windows.Forms.Button();
             this.groupBoxKivalasztottGyumolcs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEgysegar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMennyiseg)).BeginInit();
@@ -84,6 +84,16 @@
             this.groupBoxKivalasztottGyumolcs.TabStop = false;
             this.groupBoxKivalasztottGyumolcs.Text = "Kiválasztott gyümölcs";
             // 
+            // buttonModosítas
+            // 
+            this.buttonModosítas.Location = new System.Drawing.Point(34, 211);
+            this.buttonModosítas.Name = "buttonModosítas";
+            this.buttonModosítas.Size = new System.Drawing.Size(181, 35);
+            this.buttonModosítas.TabIndex = 11;
+            this.buttonModosítas.Text = "Módosítás";
+            this.buttonModosítas.UseVisualStyleBackColor = true;
+            this.buttonModosítas.Click += new System.EventHandler(this.buttonModosítas_Click);
+            // 
             // numericUpDownEgysegar
             // 
             this.numericUpDownEgysegar.DecimalPlaces = 2;
@@ -118,6 +128,7 @@
             this.textBoxGyumolcsnev.Name = "textBoxGyumolcsnev";
             this.textBoxGyumolcsnev.Size = new System.Drawing.Size(120, 26);
             this.textBoxGyumolcsnev.TabIndex = 5;
+            this.textBoxGyumolcsnev.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxAzonosito
             // 
@@ -126,6 +137,7 @@
             this.textBoxAzonosito.ReadOnly = true;
             this.textBoxAzonosito.Size = new System.Drawing.Size(120, 26);
             this.textBoxAzonosito.TabIndex = 4;
+            this.textBoxAzonosito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // labelEgysegar
             // 
@@ -162,16 +174,6 @@
             this.labelAzonosito.Size = new System.Drawing.Size(84, 20);
             this.labelAzonosito.TabIndex = 0;
             this.labelAzonosito.Text = "Azonosító:";
-            // 
-            // buttonModosítas
-            // 
-            this.buttonModosítas.Location = new System.Drawing.Point(34, 211);
-            this.buttonModosítas.Name = "buttonModosítas";
-            this.buttonModosítas.Size = new System.Drawing.Size(181, 35);
-            this.buttonModosítas.TabIndex = 11;
-            this.buttonModosítas.Text = "Módosítás";
-            this.buttonModosítas.UseVisualStyleBackColor = true;
-            this.buttonModosítas.Click += new System.EventHandler(this.buttonModosítas_Click);
             // 
             // FormTanuloUpdate
             // 

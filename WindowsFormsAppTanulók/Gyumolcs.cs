@@ -29,7 +29,7 @@ namespace WindowsFormsAppTanulók
 
         public override string ToString()
         {
-            return nev;
+            return nev + "(" + egysegar + ")" + mennyiseg;
         }
     }
 }
