@@ -32,5 +32,9 @@ namespace WindowsFormsAppTanulók
             Program.formTanuloDelete.ShowDialog();
         }
 
+        private void FormNyito_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
